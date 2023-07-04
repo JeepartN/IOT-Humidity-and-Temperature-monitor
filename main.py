@@ -40,7 +40,7 @@ def main():
             client.publish(HUM_TOPIC, str(humidity).encode())
             LED.toggle()
             last_publish = utime.time()
-        utime.sleep(5)
+        utime.sleep(publish_interval)
         
     
 def connectToMQTT():
